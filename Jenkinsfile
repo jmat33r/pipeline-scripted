@@ -1,4 +1,6 @@
 #!/usr/bin/env groovy
 node (){
-    sh "echo env.BRANCH_NAME"
+    sh """
+        echo ${BRANCH_NAME}
+    """
 }
