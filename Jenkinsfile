@@ -8,7 +8,7 @@ node {
 
         sh 'printenv'
 
-        if ( $BRANCH == 'origin/development' ) {
+        if ( 'development' == 'development' ) {
             echo 'Building development'
         } else {
             echo 'Error'
