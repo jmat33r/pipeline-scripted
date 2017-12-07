@@ -1,8 +1,9 @@
 #!/usr/bin/env groovy
+BNAME = env.BRANCH_NAME
 node {
     checkout scm
 
-    sh 'echo env.BRANCH_NAME'
+    sh 'echo $BNAME'
     
     stage('Build') {
         echo 'Building....'
