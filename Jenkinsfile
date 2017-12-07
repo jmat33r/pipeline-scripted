@@ -1,6 +1,7 @@
 #!/usr/bin/env groovy
 node (){
+    checkout scm
     sh """
-        echo ${BRANCH_NAME}
+        echo ${envBRANCH_NAME}
     """
 }
