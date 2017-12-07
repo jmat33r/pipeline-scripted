@@ -2,10 +2,12 @@
 node {
     checkout scm
 
-    def branches = sh(returnStdout: true, script: "git branch --contains ${commitId}")
+    
 
     stage('Build') {
 
+        def branches = sh(returnStdout: true, script: "git branch --contains ${commitId}")
+        
         sh 'printenv'
 
         if ( 'development' == 'development' ) {
