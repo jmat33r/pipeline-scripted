@@ -6,8 +6,8 @@ node {
 
     stage('Build') {
 
-        def branches = sh(returnStdout: true, script: "git branch --contains ${commitId}")
-        
+        def branches = sh(returnStdout: true, script: "git branch --contains ${commitHash}")
+
         sh 'printenv'
 
         if ( 'development' == 'development' ) {
