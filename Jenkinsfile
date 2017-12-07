@@ -1,8 +1,14 @@
 #!/usr/bin/env groovy
 node {
-    
+
     def scmVars = checkout scm
     
+
+    git url: "$GIT_REPO_URL", branch: "$GIT_BRANCH"
+    echo env.GIT_COMMIT
+    echo env.GIT_BRANCH
+    echo env.GIT_REVISION
+
     stage('Build') {
 
         shortCommit = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%h'").trim()
