@@ -2,7 +2,7 @@
 node {
     checkout scm
     stage('Build') {
-        if ( env.BRANCH_NAME == 'development' ) {
+        if ( env.BRANCH_NAME == 'origin/development' ) {
             echo 'Building development'
         } else {
             echo 'Error'
