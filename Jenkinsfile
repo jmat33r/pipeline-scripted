@@ -2,6 +2,6 @@
 node (){
     checkout scm
     sh """
-        echo ${envBRANCH_NAME}
+        echo ${env.BRANCH_NAME}
     """
 }
