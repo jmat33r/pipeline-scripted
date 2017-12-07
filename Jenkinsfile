@@ -5,11 +5,11 @@ node {
     
     stage('Build') {
 
-        echo scmVars
+        echo 'scmVars are: ' + scmVars
 
         def branchName = sh(returnStdout: true, script: 'git rev-parse --abbrev-ref HEAD').trim()
-        echo branchName
-        sh 'printenv'
+        echo 'branch name is: ' + branchName
+        sh '#printenv'
 
         if ( 'development' == 'development' ) {
             echo 'Building development'
