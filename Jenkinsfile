@@ -1,6 +1,9 @@
 #!/usr/bin/env groovy
 node {
     checkout scm
+
+    def branches = sh(returnStdout: true, script: "git branch --contains ${commitId}")
+
     stage('Build') {
 
         sh 'printenv'
