@@ -1,10 +1,8 @@
 #!/usr/bin/env groovy
 node {
-    checkout scm
-
+    
     def scmVars = checkout scm
-    def branchName = scmVars.GIT_BRANCH
-
+    
     stage('Build') {
 
 
