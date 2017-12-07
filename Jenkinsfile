@@ -1,11 +1,11 @@
 #!/usr/bin/env groovy
 node {
 
-    def scmVars = checkout scm
+    checkout scm
 
     stage('Build') {
 
-        echo 'scmVars are: ' + scmVars
+        sh 'echo $BRANCH_NAME'
 
         if ( 'development' == 'development' ) {
             echo 'Building development'
