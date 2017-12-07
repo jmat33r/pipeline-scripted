@@ -5,7 +5,7 @@ node {
 
         sh 'printenv'
 
-        if ( $GIT_BRANCH == 'origin/development' ) {
+        if ( $BRANCH == 'origin/development' ) {
             echo 'Building development'
         } else {
             echo 'Error'
