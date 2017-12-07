@@ -1,12 +1,12 @@
 #!/usr/bin/env groovy
-BNAME = env.BRANCH_NAME
 node {
     checkout scm
-
-    sh 'echo $BNAME'
-    
     stage('Build') {
-        echo 'Building....'
+        if ( env.BRANCH_NAME == 'development' ) {
+            echo 'Building development'
+        } else {
+            echo 'Error'
+        }
     }
     stage('Test') {
         echo 'Building....'
