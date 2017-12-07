@@ -2,7 +2,7 @@
 node {
     checkout scm
     stage('Build') {
-        if ( $BRANCH_NAME == 'origin/development' ) {
+        if ( $GIT_BRANCH == 'origin/development' ) {
             echo 'Building development'
         } else {
             echo 'Error'
