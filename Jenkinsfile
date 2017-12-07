@@ -2,11 +2,11 @@
 node {
     checkout scm
 
-    
+    def scmVars = checkout scm
+    def branchName = scmVars.GIT_BRANCH
 
     stage('Build') {
 
-        def branches = sh(returnStdout: true, script: "git branch --contains ${commitHash}")
 
         sh 'printenv'
 
