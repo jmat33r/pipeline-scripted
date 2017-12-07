@@ -2,6 +2,9 @@
 node {
     checkout scm
     stage('Build') {
+
+        sh 'printenv'
+
         if ( $GIT_BRANCH == 'origin/development' ) {
             echo 'Building development'
         } else {
