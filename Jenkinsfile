@@ -5,7 +5,7 @@ node {
 
     stage('Build') {
 
-        sh 'echo $BRANCH_NAME'
+        sh "echo ${env.BRANCH_NAME}"
 
         if ( 'development' == 'development' ) {
             echo 'Building development'
