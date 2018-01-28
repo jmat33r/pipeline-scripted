@@ -5,8 +5,6 @@ node {
 
         sh 'printenv'
 
-        echo ${BRANCH_NAME}
-       
     }
     stage('Test') {
         echo 'Building....'
