@@ -5,7 +5,7 @@ node {
 
         sh 'printenv'
 
-        echo $GIT_BRANCH
+        echo ${BRANCH_NAME}
        
     }
     stage('Test') {
